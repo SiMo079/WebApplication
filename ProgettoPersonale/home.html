@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bring Me The Horizon Fan site</title>
+
+    <!-- Bootstrap CSS -->
+    <!-- [Caricamento di Bootstrap via CDN] -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!-- Bootstrap JS Bundle con Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+            crossorigin="anonymous"></script>
+
+
+    <link rel="stylesheet" href="css/styles.css">
+
+</head>
+<body>
+
+<!-- [SEMANTIC-TAG] "header" definisce l'intestazione della pagina -->
+<!-- Classe Bootstrap "bg-black" per il background scuro, "p-3" per il padding interno, e "mb-4" per il margine inferiore -->
+<header class="bg-black p-3 mb-4 text-white">
+
+    <!-- "container" contiene e centra il contenuto rispetto al viewport -->
+    <div class="container">
+        <!-- Centrare il testo con "text-center" -->
+        <h1 class="text-center">Bring Me The Horizon</h1>
+        <p class="text-center">I Bring Me the Horizon sono una band britannica, pionieri di un sound unico e moderno nel panorama musicale internazionale.</p>
+
+        <!-- Menu di navigazione -->
+        <!-- [SEMANTIC-TAG] "nav" è l'elemento semantico per la navigazione -->
+        <!-- "justify-content-center" per centrare gli elementi della nav -->
+        <nav class="text-center text-white-50">
+            <ul class="nav justify-content-center">
+                <li class="nav-item">
+                    <!-- "nav-link" per lo stile dei link -->
+                    <a class="nav-link" href="home.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="songs.html">Songs</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contact.html">Contact</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<!-- [SEMANTIC-TAG] "main" definisce il contenuto principale della pagina -->
+<main class="container">
+    <!-- Prima sezione: Biografia -->
+    <!-- [SEMANTIC-TAG] "section" raggruppa logicamente la biografia -->
+    <section class="mb-5">
+        <!-- "row" crea una riga per la griglia Bootstrap -->
+        <div class="row">
+            <!-- "card" struttura la biografia con Bootstrap in un layout semplice -->
+            <div class="card m-3">
+                <div class="row g-0">
+                    <!-- Colonna con l'immagine biografica. "col-md-2" per la larghezza su schermi medi e superiori -->
+                    <div class="col-md-2">
+                        <!-- "img-fluid" rende l'immagine responsive, "rounded-start" arrotonda gli angoli a sinistra -->
+                        <img src="img/bmth.jpg" class="img-fluid rounded-start p-1" alt="bmth photo">
+                    </div>
+                    <!-- Testo della biografia. "col-md-10" per la larghezza del contenuto testuale -->
+                    <div class="col-md-10">
+                        <div class="card-body">
+                            <!-- Titolo della card -->
+                            <h5 class="card-title">Biografia</h5>
+                            <p class="card-text">I Bring Me the Horizon sono una band britannica fondata a Sheffield nel 2004.
+                                Noti per l’energia e l’innovazione, hanno iniziato con sonorità metalcore, evolvendosi poi verso
+                                un mix di rock alternativo, elettronica e pop. Guidati dal frontman Oliver Sykes, hanno raggiunto
+                                il successo mondiale con album come Sempiternal e That's the Spirit, conquistando una fanbase
+                                globale. Il loro stile unico continua a ridefinire i confini del rock moderno, rendendoli uno
+                                dei gruppi più influenti della scena musicale attuale.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seconda sezione: Leading the Future of Software Development -->
+    <!-- [SEMANTIC-TAG] "section" racchiude la sezione sui contributi di Uncle Bob -->
+    <section>
+        <div class="row">
+            <!-- [SEMANTIC-TAG] "article" per gli articoli distinti della sezione -->
+
+            <div class="col-6">
+                <article class="mt-2">
+                    <!-- Articolo 1: Carriera -->
+                    <h3>Carriera</h3>
+                    <p>
+                        La carriera dei Bring Me the Horizon è stata segnata da un’evoluzione costante e audace che ha
+                        sfidato le aspettative del pubblico e della critica. Dopo un debutto fortemente radicato nel deathcore
+                        con Count Your Blessings (2006), la band ha cominciato a esplorare nuove direzioni, abbracciando
+                        sonorità metalcore in Suicide Season (2008) e creando un’identità più accessibile con There Is a Hell,
+                        Believe Me, I’ve Seen It. There Is a Heaven, Let’s Keep It a Secret (2010).
+
+                        La svolta decisiva è arrivata con Sempiternal (2013), album che ha ampliato il loro pubblico grazie
+                        a brani più melodici e testi introspettivi. Con That's the Spirit (2015), la band ha incorporato
+                        elementi elettronici e pop, segnando un cambio radicale e consolidandosi tra i principali innovatori
+                        del rock moderno. L’esperimento di amo (2019) ha continuato su questa scia, con brani che esplorano
+                        temi d’amore e vulnerabilità, ricevendo elogi per la capacità di abbattere le barriere di genere.
+
+                        Più di recente, con la serie di EP Post Human, i Bring Me the Horizon hanno esplorato un ritorno alle
+                        sonorità più dure ma arricchite da elementi elettronici e collaborazioni inaspettate, come con
+                        YUNGBLUD e Babymetal, dimostrando una versatilità senza confini e una costante voglia di innovare.
+                        La loro carriera, quindi, rappresenta un viaggio artistico in cui ogni nuovo progetto è una sfida e
+                        una trasformazione, mantenendo sempre alta l’attenzione sulla capacità di reinventarsi.
+                    </p>
+                </article>
+            </div>
+
+
+            <div class="col-6">
+                <!-- Articolo 2: Contributi -->
+                <article class="mt-2">
+                    <h3>Contributi sociali</h3>
+                    <p>I Bring Me the Horizon si sono distinti anche per il loro impegno sociale e per la sensibilità verso
+                        tematiche di grande rilevanza. Il frontman Oliver Sykes ha parlato pubblicamente della sua esperienza
+                        con la tossicodipendenza, utilizzandola come piattaforma per sensibilizzare i fan sulla salute mentale
+                        e sulle dipendenze, soprattutto nel mondo della musica. Con testi crudi e sinceri, la band affronta
+                        temi come la depressione, l’isolamento e l’autolesionismo, aiutando molti giovani ascoltatori a sentirsi
+                        compresi e meno soli.
+
+                        In aggiunta, hanno spesso partecipato a iniziative benefiche, come concerti di
+                        raccolta fondi e collaborazioni con organizzazioni di supporto psicologico e di prevenzione al suicidio.
+                        Durante la pandemia di COVID-19, hanno mostrato grande attenzione per il benessere dei fan e per le
+                        problematiche della quarantena, organizzando eventi online e condividendo messaggi di supporto. Inoltre,
+                        la loro musica e i messaggi social hanno spesso evidenziato problematiche legate all’ambiente e
+                        all’emergenza climatica, sensibilizzando il pubblico su temi di sostenibilità.
+
+                        Con una presenza forte sui social, la band ha creato una comunità dove si promuove il rispetto,
+                        l’empatia e la condivisione, rafforzando l’idea che la musica possa essere uno strumento di cambiamento
+                        sociale e di supporto emotivo.</p>
+                </article>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Sezione Attività Correnti -->
+    <section>
+        <!-- [SEMANTIC-TAG] "article" per racchiudere il contenuto semantico delle attività correnti -->
+        <article>
+            <div class="row my-3">
+                <div class="col-md-12">
+                    <!-- Card per mostrare informazioni in un layout ordinato -->
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Attività Correnti</h5>
+                            <p class="card-text">Al momento, i Bring Me the Horizon sono impegnati in un tour mondiale
+                                che include date in Sud America, con tappe a San Paolo, Santiago, Buenos Aires, Bogotà
+                                e Città del Messico, fino alla fine del 2024. Proseguiranno poi in Europa nel 2025, con
+                                esibizioni in festival di rilievo come Rock am Ring e Rock im Park in Germania.
+
+                                Oltre ai concerti, la band continua a collaborare con altri artisti e a pubblicare nuova
+                                musica, mantenendo la loro presenza attiva nella scena musicale.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </article>
+    </section>
+
+    <!-- Blocco di citazione -->
+    <article>
+        <div class="row my-3">
+            <div class="col-md-12">
+                <!-- Card con una citazione -->
+                <div class="card  mb-3">
+                    <div class="card-header">Quote</div>
+                    <div class="card-body">
+                        <blockquote class="blockquote mb-0">
+                            <p>What doesn't destroy you, leaves you broken instead.</p>
+                            <!-- [SEMANTIC-TAG] "cite" è il tag semantico per citare la fonte di un'opera o autore -->
+                            <footer class="blockquote-footer"><cite title="Source Title">Oliver Sykes (Drown)</cite></footer>
+                        </blockquote>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </article>
+
+</main>
+
+<!-- [SEMANTIC-TAG] "footer" racchiude il contenuto del piè di pagina -->
+<!-- Bootstrap classes per il layout: "bg-black" per il background scuro, "text-center" per centrare il testo, "p-3" per aggiungere padding interno -->
+<footer class="bg-black text-center p-3 mt-4 text-white">
+    <p>2024 - Web Application - Unical - All Rights Reserved</p>
+</footer>
+
+</body>
+</html>
