@@ -1,12 +1,43 @@
-package com.dipartimento.demowebapplications.persistence.dao;
+public class RistoranteDAO implements GenericDAO<Ristorante, Long> {
+    private EntityManager em;
 
-import com.dipartimento.demowebapplications.model.Ristorante;
+    public RistoranteDAO(EntityManager em) {
+        this.em = em;
+    }
 
-import java.util.List;
+    @Override
+    public List<Ristorante> findAll() {
+        return em.createQuery("SELECT r FROM Ristorante r", Ristorante.class).getResultList();
+    }
 
-public interface RistoranteDao {
-    public List<Ristorante> findAll();
-    public Ristorante findByPrimaryKey(String nome);
-    public void save(Ristorante ristorante);
-    public void delete(Ristorante ristorante);
+    @Override
+    public Ristorante findById(Long id) {
+        return em.find(Ristorante.class, id);
+    }
+
+    @Override
+    public Ristorante create(Ristorante ristorante) {
+        em.getTransaction().begin();
+        em.persist(ristorante);
+        em.getTransaction().commit();
+        return ristorante;
+    }
+
+    @Override
+    public Ristorante update(Ristorante ristorante) {
+        em.getTransaction().begin();
+        Ristorante updated = em.merge(ristorante);
+        em.getTransaction().commit();
+        return updated;
+    }
+
+    @Override
+    public void delete(Long id) {
+        em.getTransaction().begin();
+        Ristorante ristorante = em.find(Ristorante.class, id);
+        if (ristorante != null) {
+            em.remove(ristorante);
+        }
+        em.getTransaction().commit();
+    }
 }
