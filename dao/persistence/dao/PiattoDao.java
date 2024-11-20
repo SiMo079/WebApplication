@@ -1,24 +1,44 @@
-package com.dipartimento.demowebapplications.persistence.dao;
+public class PiattoDAO implements GenericDAO<Piatto, Long> {
+    private EntityManager em;
 
-import com.dipartimento.demowebapplications.model.Piatto;
-import com.dipartimento.demowebapplications.model.Ristorante;
+    public PiattoDAO(EntityManager em) {
+        this.em = em;
+    }
 
-import java.util.List;
+    @Override
+    public List<Piatto> findAll() {
+        return em.createQuery("SELECT p FROM Piatto p", Piatto.class).getResultList();
+    }
 
-public interface PiattoDao {
+    @Override
+    public Piatto findById(Long id) {
+        return em.find(Piatto.class, id);
+    }
 
+    @Override
+    public Piatto create(Piatto piatto) {
+        em.getTransaction().begin();
+        em.persist(piatto);
+        em.getTransaction().commit();
+        return piatto;
+    }
 
-    public List<Piatto> findAll();
+    @Override
+    public Piatto update(Piatto piatto) {
+        em.getTransaction().begin();
+        Piatto updated = em.merge(piatto);
+        em.getTransaction().commit();
+        return updated;
+    }
 
-    public Piatto findByPrimaryKey(String nome);
-
-    public void save(Piatto piatto);
-
-    public void delete(Piatto piatto);
-
-    List<Piatto> findAllByRistoranteName(String name);
-
-
-
-
+    @Override
+    public void delete(Long id) {
+        em.getTransaction().begin();
+        Piatto piatto = em.find(Piatto.class, id);
+        if (piatto != null) {
+            em.remove(piatto);
+        }
+        em.getTransaction().commit();
+    }
 }
+
